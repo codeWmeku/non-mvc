@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4; /* Lighter background for better contrast */
+    color: #333; /* Darker text for better readability */
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 60px; /* Adjusted height to match your original design */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff; /* White background for the navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    padding: 0 20px; /* Increased padding for better spacing */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .left {
+    height: 40px;
+    background: #e0e0e0; /* Slightly darker background for the welcome area */
+    border-radius: 20px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left h1 {
+    font-size: 1.5em; /* Adjusted font size for the welcome message */
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center a {
+    margin-left: 20px; /* Increased margin for better spacing */
+    text-decoration: none;
+}
+
+.nav-center i {
+    background: none;
+    border-radius: 10px;
+    font-size: 24px; /* Slightly larger icons */
+    padding: 15px 25px; /* Increased padding for better click area */
+    color: #646262;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-center a:hover i {
+    background: #e0e0e0; /* Light background on hover */
+    color: #252525; /* Darker text on hover */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a {
+    margin-left: 12px;
+}
+
+.nav-right i {
+    background: #e0e0e0; /* Light background for icons */
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.nav-right a:hover i {
+    background: #b9b7b7; /* Darker background on hover */
+}
+
+.nav-toggle {
+    display: none; /* Hide toggle button by default */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-center {
+        display: none; /* Hide by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Below the navbar */
+        left: 0;
+        right: 0;
+        background: #ffffff; /* White background */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* Ensure it appears above other content */
+    }
+
+    .nav-center.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button */
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px; /* Adjust the margin to match the height of the nav bar */
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.main-left {
+    width: 80%; /* Adjusted width for better layout */
+    background: #ffffff; /* White background for the main content */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-left h1{
+    margin-bottom: 20px; /* Space below the heading */
+
+}
+
+.filter-form {
+    margin-bottom: 20px; /* Space below the filter form */
+}
+
+.filter-form input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.filter-form button {
+    background: #007bff; /* Bootstrap primary color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-form button:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+
+.events-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-item {
+    background: #f8f9fa; /* Light background for event items */
+    padding: 15px;
+    margin-bottom: 15px; /* Space between event items */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h2 {
+    color: #343a40; /* Dark text for event titles */
+    margin-bottom: 20px;
+}
+
+.rsvp-button {
+    background: #28a745; /* Bootstrap success color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.rsvp-button:hover {
+    background: #218838; /* Darker shade on hover */
+}
+
+/* Add these styles to eventsStyle.css */
+.rsvp-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.rsvp-button:hover {
+    background-color: #45a049;
+}
+
+.events-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h2 {
+    margin-top: 0;
+}
+
+select {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+}

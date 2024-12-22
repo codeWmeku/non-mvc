@@ -1,0 +1,184 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4; 
+    color: #333; 
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.nav-left h1 {
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center a {
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.nav-center i {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    color: #646262;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-center a:hover i {
+    background: #e0e0e0;
+    color: #007bff;
+}
+
+.nav-right a {
+    margin-left: 12px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    .nav-center {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-center.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* Content Styles */
+.content {
+    margin-top: 80px; /* Adjust for the fixed navbar */
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2em;
+    color: #007bff;
+}
+
+.resource-form {
+    background: #ffffff; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+
+.resource-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resource-form input,
+.resource-form textarea,
+.resource-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.resource-form button {
+    padding: 10px 20px;
+    background: #007bff; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.resource-form button:hover {
+    background: #0056b3; 
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f9f9f9; 
+}
+
+table th {
+    background: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Mobile Table Styling */
+@media (max-width: 768px) {
+    table th, table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* No Resources Available Message */
+.no-resources {
+    text-align: center;
+    color: #666;
+    font-size: 1.2em;
+}

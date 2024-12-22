@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4; /* Lighter background for better contrast */
+    color: #333; /* Darker text for better readability */
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff; /* White background for the navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    padding: 0 20px; /* Increased padding for better spacing */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left h1 {
+    background: #fff;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center a {
+    margin-left: 20px; /* Increased margin for better spacing */
+    text-decoration: none;
+}
+
+.nav-center i {
+    background: none;
+    border-radius: 10px;
+    font-size: 24px; /* Slightly larger icons */
+    padding: 15px 25px; /* Increased padding for better click area */
+    color: #646262;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-center a:hover i {
+    background: #e0e0e0; /* Light background on hover */
+    color: #252525; /* Darker text on hover */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a {
+    margin-left: 12px;
+}
+
+.nav-right i {
+    background: #e0e0e0; /* Light background for icons */
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.nav-right a:hover i {
+    background: #b9b7b7 ; /* Darker background on hover */
+}
+
+.nav-toggle {
+    display: none; /* Hide toggle button by default */
+    background: none;
+    border: none;
+    font-size: 24px; /* Larger font for the toggle button */
+    cursor: pointer;
+    margin-left: 20px; /* Align with other nav items */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-center {
+        display: none; /* Hide by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Below the navbar */
+        left: 0;
+        right: 0;
+        background: #ffffff; /* White background */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* Ensure it appears above other content */
+    }
+
+    .nav-center.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button */
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none; /* Hide toggle button on larger screens */
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px; /* Adjust the margin to match the height of the nav bar */
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.main-left {
+    width: 65%; /* Adjusted width for better layout */
+    margin-right: 20px; /* Added margin for spacing */
+}
+
+.main-right {
+    width: 30%;
+    margin-left: 20px; /* Added margin for spacing */
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+/* Requests Section Styling */
+.requests-card {
+    width: 100%;
+    background-color: #ffffff; /* White background for the requests section */
+    border-radius: 8px;
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Margin at the bottom */
+}
+
+.requests-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.requests-table th, .requests-table td {
+    padding: 12px; /* Added padding for better readability */
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.requests-table th {
+    background-color: #f8f8f8; /* Slight background color for headers */
+    font-weight: bold;
+}
+
+.requests-table td {
+    background-color: #ffffff;
+}
+
+.requests-table tr:hover {
+    background-color: #f9f9f9; /* Hover effect for rows */
+}
+
+.requests-table ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove padding */
+}
+
+.requests-table ul li {
+    background: #e0f7fa; /* Light blue background for attendees */
+    margin: 5px 0; /* Space between attendees */
+    padding: 5px; /* Padding for each attendee */
+    border-radius: 3px; /* Rounded corners for attendees */
+}
